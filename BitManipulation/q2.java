@@ -19,5 +19,5 @@ private static int ans(int[] arr){
         unique^=i;
     }
     return unique;
-}
+} 
 }
