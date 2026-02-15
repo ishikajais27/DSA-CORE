@@ -1,10 +1,10 @@
-import java.util.HashSet;
+import java.util.HashMap;
 
 class Contains2 {
     public static void main(String args[]) {
       int[] arr = {1,2,3,4,5,67,8,1,2,3};
       int k =3;
-      System.out.println(hash(arr,k));
+      System.out.println(map(arr,k));
     }
 
 //USING LOOPS
@@ -19,12 +19,26 @@ class Contains2 {
 
 
 //USING HASH SET
-    static boolean hash(int[] arr,int k){
-        HashSet<Integer> set = new HashSet<>();
+    // static boolean hash(int[] arr,int k){
+    //     HashSet<Integer> set = new HashSet<>();
+    //     for(int i=0;i<arr.length;i++){
+    //            if(set.contains(arr[i])) return true;
+    //            set.add(arr[i]);
+    //            if(set.size() > k) set.remove(arr[i - k]);
+    //     }
+    //     return false;
+    // }
+
+
+
+    //USING HASH MAP
+    static boolean map(int[] arr,int k){
+        HashMap<Integer,Integer> map = new HashMap<>();
         for(int i=0;i<arr.length;i++){
-               if(set.contains(arr[i])) return true;
-               set.add(arr[i]);
-               if(set.size() > k) set.remove(arr[i - k]);
+            if(map.containsKey(arr[i]) && i - map.get(arr[i]) <= k){
+                return true;
+            }
+            map.put(arr[i], i);
         }
         return false;
     }
