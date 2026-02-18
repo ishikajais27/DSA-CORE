@@ -5,6 +5,8 @@ public class MinRotated {
         System.out.println(findMin(nums));
 
     }
+
+    //OPTIMAL SOLUTION O(logn) USED CONCEPT OF 2 POINTER 
     static int findMin(int[] nums) {
         int s = 0;
         int e = nums.length - 1;

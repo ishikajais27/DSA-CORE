@@ -5,6 +5,8 @@ public class Median {
        double m = findMedianSortedArrays(a1,a2);
        System.out.println(m); 
    }   
+
+   //USING 2 POINTER
     static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int m = nums1.length;
         int n = nums2.length;
