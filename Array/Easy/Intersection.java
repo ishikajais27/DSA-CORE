@@ -10,8 +10,6 @@ public class Intersection {
               System.out.println(Arrays.toString(result));
    }
 
-
-
    static  int[] intersect(int[] nums1, int[] nums2) {
         // APROACH 1 USING SORTING AND 2 PTR
         //  Arrays.sort(nums1);
