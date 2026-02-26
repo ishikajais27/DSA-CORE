@@ -34,9 +34,6 @@ public static void main(String[] args) {
 
 
 
-
-
-
     //My aproach
     static int findLHS(int[] nums) {
         Arrays.sort(nums);
