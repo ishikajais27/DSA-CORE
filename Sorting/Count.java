@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Count {
     public static void main(String[] args) {
@@ -26,4 +27,25 @@ public class Count {
         }
     }
   }
+
+//USING HASHMAP
+// static void HashCount(int[] arr,int n){
+//     if(arr ==null || arr.length<=1){
+//         return;
+//     }
+//     int max = Arrays.stream(arr).max().getAsInt();
+//     int min = Arrays.stream(arr).min().getAsInt();
+//     HashMap<Integer,Integer> map = new HashMap<>();
+//        for(int num:arr){
+//         map.put(num,map.getOrDefault(num, 0)+1);
+//        }
+//        int index =0;
+//        for(int i=min;i<=max;i++){
+//         int count = map.getOrDefault(i, 0);
+//        }
+}
+
+
+
+
 }
