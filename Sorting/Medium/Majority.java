@@ -9,7 +9,7 @@ public class Majority {
         int ans = 0;
 
         for (int start = 0; start < n; start++) {
-            int targetCount = 0;
+            int targetCount = 0;    
             int length = 0;
 
             int right = start;
