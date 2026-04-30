@@ -48,5 +48,31 @@ public class Main {
 
         System.out.println("Merged List:");
         InsertRecursion.display(mergedHead);
+
+// -------- Cycle Test Code --------
+
+LL cycleList = new LL();
+
+// create list: 1 -> 2 -> 3 -> 4
+cycleList.head = InsertRecursion.insertRec(1, 0, cycleList.head);
+cycleList.head = InsertRecursion.insertRec(2, 1, cycleList.head);
+cycleList.head = InsertRecursion.insertRec(3, 2, cycleList.head);
+cycleList.head = InsertRecursion.insertRec(4, 3, cycleList.head);
+
+// create cycle: last node -> node with value 2
+LL.Node temp = cycleList.head;
+LL.Node connectNode = cycleList.head.next;
+
+while (temp.next != null) {
+    temp = temp.next;
+}
+temp.next = connectNode;
+
+// call directly (no object)
+boolean result = Cycle.hasCycle(cycleList.head);
+
+System.out.println("\nCycle Present: " + result);
+
+
     }
 }
