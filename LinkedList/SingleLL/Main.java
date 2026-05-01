@@ -89,5 +89,12 @@ while(mid2!=null){
     System.out.println(mid2);
     mid2 = mid2.next;
 }
+
+
+//-------------Find nth elemenet using hashmap-----------------
+LL.Node hash = HashFind.findNode(1,list1.head);
+
+System.out.println("Node at 1st index - " + 
+    (hash != null ? hash.val : "No node present"));
     }
 }
