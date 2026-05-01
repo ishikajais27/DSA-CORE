@@ -55,9 +55,9 @@ LL cycleList = new LL();
 
 // create list: 1 -> 2 -> 3 -> 4
 cycleList.head = InsertRecursion.insertRec(1, 0, cycleList.head);
-cycleList.head = InsertRecursion.insertRec(2, 1, cycleList.head);
-cycleList.head = InsertRecursion.insertRec(3, 2, cycleList.head);
-cycleList.head = InsertRecursion.insertRec(4, 3, cycleList.head);
+cycleList.head = InsertRecursion.insertRec(0, 1, cycleList.head);
+cycleList.head = InsertRecursion.insertRec(1, 2, cycleList.head);
+cycleList.head = InsertRecursion.insertRec(0, 3, cycleList.head);
 
 // create cycle: last node -> node with value 2
 LL.Node temp = cycleList.head;
@@ -96,5 +96,19 @@ LL.Node hash = HashFind.findNode(1,list1.head);
 
 System.out.println("Node at 1st index - " + 
     (hash != null ? hash.val : "No node present"));
+
+
+
+//-----------Binary to Decimal Conversion-----------------  
+LL bin = new LL();
+
+// create list: 1 -> 2 -> 3 -> 4
+bin.head = InsertRecursion.insertRec(1, 0, bin.head);
+bin.head = InsertRecursion.insertRec(0, 1, bin.head);
+bin.head = InsertRecursion.insertRec(1, 2, bin.head);
+bin.head = InsertRecursion.insertRec(0, 3, bin.head); 
+int dec = BinToDec.getDecimalValue( bin.head);
+
+System.out.println("Decima of given Binary - " + dec ); 
     }
 }
