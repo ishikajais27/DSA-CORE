@@ -74,5 +74,20 @@ boolean result = Cycle.hasCycle(cycleList.head);
 System.out.println("\nCycle Present: " + result);
 
 
+//------Intersction-----
+LL.Node node = Intersect.getIntersectionNode(list1.head, list2.head);
+
+System.out.println("Intersection Present at - " + 
+    (node != null ? node.val : "No Intersection"));
+
+//--------Middle------------
+LL.Node mid = Middle.middleNode(list1.head);
+
+System.out.println("Middle node of the given list- ");
+LL.Node mid2 = mid;
+while(mid2!=null){
+    System.out.println(mid2);
+    mid2 = mid2.next;
+}
     }
 }
